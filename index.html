@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ASTU</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .main_table_header {
+      padding: 5px;
+      background: linear-gradient(#4db2d3, #2e88a5);
+      color: #7beae5;
+    }
+    .news_update_heading {
+      padding: 5px;
+      background: linear-gradient(#2da8d0c7, #edf7fa);
+    }
+  </style>
+  <script>
+    function openPDF(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      // Open the desired PDF file (adjust the path as necessary)
+      window.open('pdf/CEEadmit.pdf', '_blank');
+    }
+  </script>
+</head>
+<body>
+  <table width="100%" align="center">
+    <tr>
+      <td colspan="3" align="center" class="main_table_header">
+        <img src="images/AstuLogo.jpg" width="240" height="80" alt="Logo">
+        <br>
+        <font size="4">
+          <b style="color: #fff">
+            Combined Entrance Examination, 2024 (CEE-2024) for admission to B.Tech 1st Semester Programme in the State of Assam
+          </b>
+        </font>
+        <br>
+      </td>
+    </tr>
+  </table>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" style="padding: 20px 50px;">
+        <div class="news_update_heading">
+          <b><img src="images/news.png" height="12" alt="News" />&nbsp;<strong>News Update</strong></b>
+        </div>
+        <div style="padding: 10px 25px;">
+          <marquee behavior="scroll" direction="up" scrollamount="2" onMouseOver="this.stop();" onMouseOut="this.start();">
+            <p><a href="pdf/Notification regarding Admit Card, CEE-2024.pdf" target="_blank">Notification regarding Admit Card, CEE-2024<img src="images/NEW1A.GIF" style="height:15px !important;width:35px !important" alt="New"></a></p>
+            <p><a href="pdf/CEE 2024 Payment Extension Notification.pdf" target="_blank">CEE 2024 Payment Extension Notification <img src="images/NEW1A.GIF" style="height:15px !important;width:35px !important" alt="New"></a></p>
+            <p><a href="pdf/ASTU_IB.pdf" target="_blank">Download INFORMATION BROCHURE (CEE 2024)</a></p>
+            <p><a href="pdf/Astu_flow-step1to10.pdf" target="_blank">Process Flow (CEE 2024)</a></p>
+            <p><a href="pdf/Instructions_to_Applicants.pdf" target="_blank">Instructions to Applicants</a></p>
+            <p><a href="pdf/payment_procedure.pdf" target="_blank">Download Online Payment Instructions</a></p>
+            <p><a href="pdf/Annexure.pdf" target="_blank">Annexure A</a></p>
+          </marquee>
+        </div>
+        <div class="news_update_heading">
+          <b><img src="images/contact.gif" height="15" alt="Contact" />&nbsp;<strong>Contact us</strong></b>
+        </div>
+        <div style="padding: 10px 25px;">
+          <span><strong>For online technical help: <br>Time(10 AM to 5 PM in working days)</strong> <font color="red"><br>7977259728</font></span>
+        </div>
+      </div>
+      <div class="col-md-4" style="padding: 20px 50px;">
+        <div id="wrapper" style="background-color: #2da8d0c7;margin-top: 30px;">
+          <form id="loginform" onsubmit="openPDF(event)">
+            <div id="container">
+              <div>
+                <label for="appno"><font color="red" size="3"><i>Login for Admit Card </i></font></label>
+              </div>
+              <div>
+                <label for="appno">Application No:</label>
+                <input type='text' class='form-control' id='appno' placeholder='Enter Application No' name='appno'>
+                <span class='error' id='err_appno'></span>
+              </div>
+              <div>
+                <label for="loginpwd">Password:</label>
+                <input type='password' class='form-control' id='loginpwd' placeholder='Enter password' name='loginpwd'>
+                <span class='error' id='err_loginpwd'></span>
+              </div>
+              <div>
+                <input type='submit' value='Login' id='login_button' name='login_button' class="btn btn-primary">
+                <input type='button' value='Forgot Password' id='forgot_password_button' name='forgot_password_button' onClick="window.location.href='http://formonline.net/AstuCee24/index_sms@.html?r'" class="btn btn-secondary">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="wrapper1" style="display:none;background-color: #2da8d0c7;margin-top: 30px;">
+          <form id="regform" method="post" action="validation/validate_registration.php">
+            <div id="container">
+              <div>
+                <label for='cname'>Candidate Name (As per HSLC Certificate) :</label>
+                <input type='text' class='form-control' id='cname'  name='cname' placeholder='Enter Candidate Name (As per HSLC Certificate) '>
+                <span class='error' id='err_cname'></span>
+              </div>
+              <div>
+                <label for='mobileno'>Mobile No</label>
+                <input type='text' class='form-control' id='mobileno' name='mobileno' placeholder='Enter Mobile No' maxlength='10'>
+                <span class='error' id='err_mobileno'></span>
+              </div>
+              <div>
+                <label for='email'>Email</label>
+                <input type='text' class='form-control' id='email' name='email' placeholder='Enter Email here'>
+                <span class='error' id='err_email'></span>
+              </div>
+              <div>
+                <label for='pwd'>Password:</label>
+                <input type='password' class='form-control' id='pwd' placeholder='Enter Password' name='pwd'>
+                <span class='error' id='err_pwd'></span>
+              </div>
+              <div>
+                <label for='cpwd'>Confirm Password:</label>
+                <input type='password' class='form-control' id='cpwd' placeholder='Enter Confirm Password' name='cpwd'>
+                <span class='error' id='err_cpwd'></span>
+              </div>
+              <div>
+                <input type='submit' value='Register' id='reg_save_button' name='reg_save_button' class="btn btn-primary">
+                <input type='button' value='Login' id='login_button_save' name='login_button_save' onClick="signin_flip();" class="btn btn-secondary">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer style="text-align: center; padding: 10px; background-color: #f1f1f1;">
+    <p><font size="1">Assam Science and Technology University</font></p>
+  </footer>
+  <script src="js/custom.js"></script>
+</body>
+</html>
